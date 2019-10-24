@@ -4,13 +4,14 @@
 #
 Name     : R-plotrix
 Version  : 3.7.6
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/plotrix_3.7-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plotrix_3.7-6.tar.gz
 Summary  : Various Plotting Functions
 Group    : Development/Tools
 License  : GPL-2.0+
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 No detailed description available
@@ -22,13 +23,13 @@ No detailed description available
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1561129387
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571875374
 
 %install
-export SOURCE_DATE_EPOCH=1561129387
+export SOURCE_DATE_EPOCH=1571875374
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -57,7 +58,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
