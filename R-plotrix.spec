@@ -4,7 +4,7 @@
 #
 Name     : R-plotrix
 Version  : 3.8.1
-Release  : 37
+Release  : 38
 URL      : https://cran.r-project.org/src/contrib/plotrix_3.8-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plotrix_3.8-1.tar.gz
 Summary  : Various Plotting Functions
