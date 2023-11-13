@@ -6,10 +6,10 @@
 # autospec commit: 250a666
 #
 Name     : R-plotrix
-Version  : 3.8.3
-Release  : 59
-URL      : https://cran.r-project.org/src/contrib/plotrix_3.8-3.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/plotrix_3.8-3.tar.gz
+Version  : 3.8.4
+Release  : 60
+URL      : https://cran.r-project.org/src/contrib/plotrix_3.8-4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/plotrix_3.8-4.tar.gz
 Summary  : Various Plotting Functions
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -19,7 +19,9 @@ BuildRequires : buildreq-R
 %define debug_package %{nil}
 
 %description
-No detailed description available
+# plotrix
+`plotrix` is an `R` package that provides many plotting, labeling, and axis &
+color scaling functions.
 
 %prep
 %setup -q -n plotrix
@@ -32,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1698964265
+export SOURCE_DATE_EPOCH=1699901702
 
 %install
-export SOURCE_DATE_EPOCH=1698964265
+export SOURCE_DATE_EPOCH=1699901702
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
